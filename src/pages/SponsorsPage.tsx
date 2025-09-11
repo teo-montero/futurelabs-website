@@ -148,7 +148,7 @@ export function SponsorsPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
+                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
               >
                 Download Partnership Deck
               </Button>
@@ -234,7 +234,7 @@ export function SponsorsPage() {
         variant="gradient"
       />
 
-      {/* Sponsorship Tiers Section */}
+      {/* Sponsorship Tiers Section
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -297,7 +297,7 @@ export function SponsorsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Custom Partnership Section */}
       <section 

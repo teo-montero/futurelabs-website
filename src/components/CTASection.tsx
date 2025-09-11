@@ -76,7 +76,7 @@ export function CTASection({
                   <Button
                     onClick={onSecondaryClick}
                     variant="outline"
-                    className="border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white transition-all duration-300"
+                    className="bg-white border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white transition-all duration-300"
                     size="lg"
                   >
                     {secondaryButtonText}
@@ -119,7 +119,7 @@ export function CTASection({
                 <Button
                   onClick={onSecondaryClick}
                   variant="outline"
-                  className="border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white transition-all duration-300"
+                  className="bg-white border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white transition-all duration-300"
                   size="lg"
                 >
                   {secondaryButtonText}

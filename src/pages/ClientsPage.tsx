@@ -4,6 +4,7 @@ import { Card, CardContent } from '../components/ui/card';
 import { CTASection } from '../components/CTASection';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Building, Users, DollarSign, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { OnboardingProcess } from '../components/OnboardingProcess';
 
 export function ClientsPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,7 @@ export function ClientsPage() {
     {
       icon: Users,
       title: "Expert Teams",
-      description: "Work with carefully vetted students supervised by experienced professionals.",
+      description: "Work with students from the UK's best universities led by experienced consultants.",
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -48,7 +49,7 @@ export function ClientsPage() {
     {
       icon: Building,
       title: "Long-term Support",
-      description: "Ongoing maintenance and support to ensure your solutions continue to deliver value.",
+      description: "Ongoing training and support to ensure our solutions continue to deliver value.",
       color: "from-orange-500 to-orange-600"
     }
   ];
@@ -64,23 +65,23 @@ export function ClientsPage() {
   const projectTypes = [
     {
       title: "Website Development",
-      description: "Modern, responsive websites that tell your story and engage supporters.",
-      examples: ["Donation platforms", "Volunteer portals", "Impact showcases"]
+      description: "Modern, responsive and tailored websites that tell your story and engage supporters.",
+      examples: ["Donation platforms", "Membership portals", "Loyalty systems"]
     },
     {
       title: "Database Management",
-      description: "Streamlined systems for donor, volunteer, and beneficiary management.",
-      examples: ["CRM systems", "Volunteer databases", "Impact tracking"]
+      description: "Streamlined, integrated systems for seamless member, donor, and beneficiary management.",
+      examples: ["CRM systems", "Member databases", "Impact tracking"]
     },
     {
       title: "Automation Solutions",
-      description: "Automated workflows to reduce administrative burden and increase efficiency.",
-      examples: ["Email campaigns", "Social media scheduling", "Report generation"]
+      description: "Automated workflows to streamline internal operations, reduce staff workload and increase efficiency.",
+      examples: ["Mailing list automation", "Customer support chatbots", "Event board automation"]
     },
     {
       title: "Data Analytics",
-      description: "Insights and reporting tools to measure and communicate your impact.",
-      examples: ["Impact dashboards", "Donor analytics", "Program evaluation"]
+      description: "Insights, reporting and feedback tools to measure and communicate your impact.",
+      examples: ["Impact dashboards", "Feedback systems", "Report generation"]
     }
   ];
 
@@ -130,7 +131,7 @@ export function ClientsPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
+                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
               >
                 Schedule Consultation
               </Button>
@@ -182,8 +183,8 @@ export function ClientsPage() {
               What We Can Build for You
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From simple websites to complex automation systems, we deliver solutions 
-              that help nonprofits operate more efficiently and reach more people.
+              From websites to complex automation systems, we deliver solutions 
+              that help you operate more efficiently and scale your positive impact to more people.
             </p>
           </div>
 
@@ -212,46 +213,7 @@ export function ClientsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection
-        title="Ready to Transform Your Organization?"
-        description="Join the growing community of nonprofits leveraging technology to amplify their mission and maximize their impact."
-        primaryButtonText="Start Your Application"
-        secondaryButtonText="Schedule a Consultation"
-        onPrimaryClick={handleApplyClick}
-        onSecondaryClick={() => {
-          alert('Consultation booking coming soon! Please contact us directly.');
-        }}
-        variant="gradient"
-      />
-
-      {/* Eligibility Section */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Eligibility Criteria
-            </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              We work with nonprofits who are ready to embrace digital transformation 
-              and have the organizational capacity to collaborate effectively.
-            </p>
-          </div>
-
-          <Card className="border-0 shadow-xl bg-white">
-            <CardContent className="p-8">
-              <div className="space-y-4">
-                {eligibilityCriteria.map((criterion, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-lg">{criterion}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      <OnboardingProcess />
 
       {/* Application Process Section */}
       <section 
@@ -262,11 +224,10 @@ export function ClientsPage() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            How to Apply
+            Project Timeline
           </h2>
           <p className="text-xl text-white/80 mb-12 leading-relaxed">
-            Our application process is designed to understand your needs and ensure 
-            we can deliver maximum value for your organization.
+            Our process is designed to guide your organization to deliver meaningful results and create lasting value
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -274,35 +235,26 @@ export function ClientsPage() {
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">1</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Initial Application</h3>
-              <p className="text-white/80">Submit your organization details and project requirements.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Analysis</h3>
+              <p className="text-white/80">Assess needs and present tailored recommendations.</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8">
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">2</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Discovery Call</h3>
-              <p className="text-white/80">Have a detailed conversation about your goals and challenges.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Implementation</h3>
+              <p className="text-white/80">Develop and integrate solutions and ensure seamless adoption.</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8">
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">3</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Project Kickoff</h3>
-              <p className="text-white/80">Get matched with a team and begin your digital transformation.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Support</h3>
+              <p className="text-white/80">Finalize deliverables and train staff on the new system.</p>
             </div>
           </div>
-
-          <Button
-            onClick={handleApplyClick}
-            size="lg"
-            className="bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] hover:from-[#3a5cef] hover:to-[#6c3def] text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg"
-          >
-            <Star className="mr-2 h-5 w-5" />
-            Apply Now
-          </Button>
         </div>
       </section>
 

@@ -163,11 +163,7 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
             <div className="text-center">
               <p className="text-white/60 text-sm">
                 Powered by{' '}
-                <span className="text-white font-medium">Teo Montero Bonet</span>
-                {' '}&{' '}
-                <span className="bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] bg-clip-text text-transparent font-medium">
-                  FutureLabs
-                </span>
+                <span className="text-white font-medium">Teo Montero</span>
               </p>
             </div>
 

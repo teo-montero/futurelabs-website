@@ -3,7 +3,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { CTASection } from '../components/CTASection';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { GraduationCap, Users, Trophy, Briefcase, Code, Heart, ArrowRight } from 'lucide-react';
+import { GraduationCap, Users, Trophy, Briefcase, Code, Heart, ArrowRight, CheckCircle } from 'lucide-react';
 
 export function StudentsPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,37 +53,11 @@ export function StudentsPage() {
     }
   ];
 
-  const roles = [
-    {
-      title: "Frontend Developers",
-      description: "Build beautiful, responsive user interfaces using React, Vue, or Angular.",
-      skills: ["React", "TypeScript", "Tailwind CSS", "UI/UX Design"]
-    },
-    {
-      title: "Backend Developers",
-      description: "Create robust APIs and database systems to power nonprofit applications.",
-      skills: ["Node.js", "Python", "PostgreSQL", "RESTful APIs"]
-    },
-    {
-      title: "Full-Stack Developers",
-      description: "Work across the entire technology stack to deliver complete solutions.",
-      skills: ["JavaScript", "Database Design", "Cloud Platforms", "DevOps"]
-    },
-    {
-      title: "Project Managers",
-      description: "Lead project coordination and ensure timely delivery of client solutions.",
-      skills: ["Agile", "Communication", "Timeline Management", "Client Relations"]
-    },
-    {
-      title: "UI/UX Designers",
-      description: "Design intuitive and accessible interfaces for nonprofit organizations.",
-      skills: ["Figma", "User Research", "Accessibility", "Design Systems"]
-    },
-    {
-      title: "Data Analysts",
-      description: "Help organizations make data-driven decisions and measure their impact.",
-      skills: ["Python", "SQL", "Data Visualization", "Analytics"]
-    }
+  const eligibilityCriteria = [
+    "Ability to work in teams, build relationships and consider diverse perspectives.",
+    "Exhibit strong analytical, problem-solving and critical-thinking skills.",
+    "Be clear, professional and confident in presenting your ideas.",
+    "Have a genuine passion and commitment to dedicate effort to impactful projects."
   ];
 
   const handleApplyClick = () => {
@@ -133,7 +107,7 @@ export function StudentsPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
+                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50  hover:text-white backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
               >
                 Learn More
               </Button>
@@ -191,46 +165,6 @@ export function StudentsPage() {
         variant="gradient"
       />
 
-      {/* Roles Section */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Open Positions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're looking for passionate students across various disciplines. 
-              Find the role that matches your skills and interests.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {roles.map((role, index) => (
-              <Card key={index} className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{role.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{role.description}</p>
-                  
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900">Key Skills:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {role.skills.map((skill, skillIndex) => (
-                        <span
-                          key={skillIndex}
-                          className="px-3 py-1 bg-gradient-to-r from-[#4a6cff]/10 to-[#7c4dff]/10 text-[#4a6cff] rounded-full text-sm border border-[#4a6cff]/20"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Application Process Section */}
       <section 
         className="py-20 lg:py-32"
@@ -259,16 +193,16 @@ export function StudentsPage() {
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">2</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Skills Assessment</h3>
-              <p className="text-white/80">Complete a brief skills assessment to help us understand your capabilities.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Welcome Interview</h3>
+              <p className="text-white/80">Have a conversation with our team to discuss your goals and project fit.</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8">
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">3</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Welcome Interview</h3>
-              <p className="text-white/80">Have a conversation with our team to discuss your goals and project fit.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Project Assignment</h3>
+              <p className="text-white/80">Get matched with the project that best fits your skills and goals.</p>
             </div>
           </div>
 
@@ -280,6 +214,34 @@ export function StudentsPage() {
             <Heart className="mr-2 h-5 w-5" />
             Start Your Journey
           </Button>
+        </div>
+      </section>
+
+      {/* Eligibility Section */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              What We Look For
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              We work with nonprofits who are ready to embrace digital transformation 
+              and have the organizational capacity to collaborate effectively.
+            </p>
+          </div>
+
+          <Card className="border-0 shadow-xl bg-white">
+            <CardContent className="p-8">
+              <div className="space-y-4">
+                {eligibilityCriteria.map((criterion, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-lg">{criterion}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

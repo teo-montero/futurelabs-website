@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Phone, CheckCircle, Users, Shield, Rocket } from 'lucide-react';
+import { FileText, Phone, CheckCircle, Users, Shield, Rocket } from 'lucide-react';
 
 export function OnboardingProcess() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,6 +24,12 @@ export function OnboardingProcess() {
 
   const steps = [
     {
+      icon: FileText,
+      title: "Get in Touch",
+      description: "Submit your organization details and project requirements.",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
       icon: Phone,
       title: "Intro Call",
       description: "We start with a conversation to understand your mission, challenges, and goals.",
@@ -40,12 +46,6 @@ export function OnboardingProcess() {
       title: "Team Assignment",
       description: "We match you with specialists who understand your sector and technical needs.",
       color: "from-purple-500 to-purple-600"
-    },
-    {
-      icon: Shield,
-      title: "NDA & Setup",
-      description: "We ensure your data is protected and establish secure communication channels.",
-      color: "from-violet-500 to-violet-600"
     },
     {
       icon: Rocket,
@@ -101,7 +101,7 @@ export function OnboardingProcess() {
                   style={{ animationDelay: `${index * 150 + 500}ms` }}
                 >
                   {/* Icon Circle */}
-                  <div className="relative flex justify-center mb-8">
+                  <div className="relative flex justify-center mb-16">
                     <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-r from-[#4a6cff] to-[#7c4dff]">
                       <step.icon className="h-8 w-8 text-white" />
                     </div>

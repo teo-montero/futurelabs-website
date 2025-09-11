@@ -122,7 +122,7 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
             <Sparkles className="h-4 w-4 text-[#4a6cff]" />
-            <span className="text-sm text-white/90">Digital Consulting for Nonprofits</span>
+            <span className="text-sm text-white/90">The UK's First Student Nonprofit Digital Consultancy</span>
           </div>
 
           {/* Main Headline */}
@@ -136,7 +136,7 @@ export function Hero() {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Digital consulting for nonprofits – smarter systems, bigger impact.
+            Digital consulting and transformation – smarter systems, bigger impact.
           </p>
 
           {/* CTA Buttons */}
@@ -154,18 +154,11 @@ export function Hero() {
               onClick={scrollToServices}
               variant="outline"
               size="lg"
-              className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
+              className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
             >
               Explore Services
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>

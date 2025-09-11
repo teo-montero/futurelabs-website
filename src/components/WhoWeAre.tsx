@@ -40,20 +40,21 @@ export function WhoWeAre() {
               
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  <strong className="text-gray-900">FutureLabs is a digital consulting firm</strong> helping NGOs 
-                  implement high-impact tech solutions that amplify their mission and streamline their operations.
+                  <strong className="text-gray-900">FutureLabs is the UK's first student-run pro bono digital consultancy</strong>, 
+                  uniquely positioned to go beyond traditional strategy and analysis by delivering hands-on implementation 
+                  that bridges the gap between advice and real-world impact.
                 </p>
-                
+
                 <p>
-                  We bridge the gap between cutting-edge technology and meaningful social impact, 
-                  providing nonprofits with the digital infrastructure they need to scale their influence 
-                  and maximize their effectiveness.
+                  Unlike conventional consultancies, we don’t just recommend solutions — we design, build, and integrate them. 
+                  By combining digital expertise with strategic insight, we ensure organisations gain the tools they need to 
+                  scale their influence and achieve lasting results.
                 </p>
-                
+
                 <p>
-                  Our team combines technical expertise with deep understanding of the nonprofit sector, 
-                  delivering solutions that are not just innovative, but truly transformative for 
-                  organizations working to make the world a better place.
+                  Our teams are drawn from multidisciplinary talent across the UK’s leading universities, blending technical, 
+                  business, and creative skillsets to provide innovative solutions tailored to your organisations. Together, 
+                  we deliver outcomes that are not only visionary, but truly transformative.
                 </p>
               </div>
             </div>

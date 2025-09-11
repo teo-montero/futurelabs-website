@@ -139,7 +139,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] hover:from-[#3a5cef] hover:to-[#6c3def] text-white border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
             >
-              Get Started
+              Apply Now
             </Button>
           </div>
 
