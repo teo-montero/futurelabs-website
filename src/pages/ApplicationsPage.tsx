@@ -102,7 +102,7 @@ export function ApplicationPage() {
           <div className="animate-slide-up">
             <Card className="bg-white border border-gray-200 shadow-lg rounded-3xl">
               <CardHeader className="text-center">
-                <CardTitle className="gradient-text-primary mb-2">Student Application</CardTitle>
+                <CardTitle className="gradient-text-primary mb-2 text-3xl font-bold">Student Application</CardTitle>
                 <CardDescription className="text-gray-700">
                   Tell us about yourself and why you want to join FutureLabs Advisory
                 </CardDescription>

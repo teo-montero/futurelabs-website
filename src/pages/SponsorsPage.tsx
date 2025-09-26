@@ -119,7 +119,7 @@ export function SponsorsPage() {
           <div className="space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
               <Handshake className="h-4 w-4 text-[#4a6cff]" />
-              <span className="text-sm text-white/90">Partnership Opportunities</span>
+              <span className="text-sm text-white/90">For Partners</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">

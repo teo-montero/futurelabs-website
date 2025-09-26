@@ -52,13 +52,6 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
     { name: 'For Students', id: 'students', type: 'page' },
     { name: 'For Clients', id: 'clients', type: 'page' },
     { name: 'For Sponsors', id: 'sponsors', type: 'page' },
-    { name: 'Apply', id: 'apply', type: 'page' }
-  ];
-
-  const quickLinks = [
-    { name: 'About', id: 'who-we-are' },
-    { name: 'Services', id: 'services' },
-    { name: 'Contact', id: 'contact' }
   ];
 
   return (
@@ -106,38 +99,12 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {item.name}
               </button>
             ))}
-            
-            {/* Quick Links Dropdown */}
-            <div className="relative group">
-              <button
-                className={`transition-colors duration-300 hover:opacity-80 ${
-                  (isScrolled || currentPage !== 'home')
-                    ? 'text-gray-700 hover:text-gray-900' 
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                Quick Links ↓
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-2">
-                  {quickLinks.map((link) => (
-                    <button
-                      key={link.id}
-                      onClick={() => scrollToSection(link.id)}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-                    >
-                      {link.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handlePageChange('apply')}
               className="bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] hover:from-[#3a5cef] hover:to-[#6c3def] text-white border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
             >
               Apply Now
@@ -175,19 +142,6 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {item.name}
               </button>
             ))}
-            
-            <div className="border-t border-gray-200 pt-2 mt-2">
-              <div className="px-3 py-1 text-sm font-medium text-gray-500">Quick Links</div>
-              {quickLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="block w-full text-left px-3 py-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
-                >
-                  {link.name}
-                </button>
-              ))}
-            </div>
             
             <div className="px-3 py-2 border-t border-gray-200 mt-2">
               <Button

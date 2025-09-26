@@ -74,8 +74,8 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
                 FutureLabs
               </h3>
               <p className="text-white/80 leading-relaxed mb-6 text-lg">
-                The UK's first student-run pro bono digital consultancy, empowering nonprofits 
-                with cutting-edge technology solutions while developing the next generation of tech leaders.
+                The UK's first student-run pro bono digital consultancy, empowering organisations 
+                with innovative technology solutions while developing the next generation of tech leaders.
               </p>
             </div>
 
