@@ -3,7 +3,6 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { CTASection } from '../components/CTASection';
 import { ContactSponsor } from '../components/ContactSponsor';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Handshake, Target, TrendingUp, Award, Users, Globe, ArrowRight, Heart } from 'lucide-react';
 
 export function SponsorsPage() {
@@ -30,26 +29,26 @@ export function SponsorsPage() {
   const partnershipBenefits = [
     {
       icon: Target,
-      title: "Brand Alignment",
-      description: "Associate your brand with innovation, social impact, and the next generation of tech talent.",
+      title: "Impact",
+      description: "Empower organisations and students, and drive impact through real-world digital solutions.",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: Users,
-      title: "Talent Pipeline",
+      title: "Talent",
       description: "Connect with exceptional students and identify future hires through real project collaboration.",
       color: "from-purple-500 to-purple-600"
     },
     {
       icon: TrendingUp,
-      title: "Market Visibility",
-      description: "Gain recognition in the nonprofit and education sectors through meaningful partnership.",
+      title: "Exposure",
+      description: "Engage with students driving change through innovative ideas and impactful tech solutions.",
       color: "from-green-500 to-green-600"
     },
     {
       icon: Award,
-      title: "Impact Recognition",
-      description: "Receive detailed reports and testimonials showcasing the real-world impact of your support.",
+      title: "Recognition",
+      description: "Gain recognition from students and organisations for your committment to growth and innovation.",
       color: "from-orange-500 to-orange-600"
     }
   ];
@@ -132,8 +131,8 @@ export function SponsorsPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Join us in empowering the next generation of tech leaders while creating 
-              meaningful change in the nonprofit sector.
+              Join us in empowering the next generation of tech leaders while driving 
+              meaningful change in organisations.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
@@ -188,15 +187,14 @@ export function SponsorsPage() {
       </section> */}
 
       {/* Partnership Benefits Section */}
-      <section ref={sectionRef} className="py-20 lg:py-32 bg-gray-50">
+      <section ref={sectionRef} className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Partner with Us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Your partnership creates a triple impact: supporting nonprofits, 
-              developing student talent, and advancing your objectives.
+              Your partnership creates supports organisations, develops student talent, and advances your objectives.
             </p>
           </div>
 
@@ -222,85 +220,20 @@ export function SponsorsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <CTASection
-        title="Ready to Make a Difference?"
-        description="Join forward-thinking organizations that are investing in the future of technology and social impact."
-        primaryButtonText="Explore Partnership"
-        secondaryButtonText="Schedule a Meeting"
-        onPrimaryClick={handlePartnershipClick}
-        onSecondaryClick={() => {
-          alert('Meeting scheduling coming soon! Please contact us directly.');
+        title="Ready to Shape the Future Together?"
+        description="Let's explore how we can create opportunities and drive impact side by side."
+        primaryButtonText="Start Partnership Discussion"
+        secondaryButtonText="Read About Us"
+        onPrimaryClick={() => {
+          alert('Partnership discussion coming soon! Please email us at partnerships@futurelabs.co.uk');
         }}
-        variant="gradient"
+        onSecondaryClick={() => {
+          alert('Impact report download coming soon!');
+        }}
       />
 
-      {/* Sponsorship Tiers Section
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Partnership Levels
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Choose the partnership level that aligns with your goals and 
-              budget. Each tier offers unique benefits and recognition.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {sponsorshipTiers.map((tier, index) => (
-              <Card 
-                key={index} 
-                className={`h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                  tier.featured 
-                    ? 'ring-2 ring-[#4a6cff] bg-gradient-to-br from-[#4a6cff]/5 to-[#7c4dff]/5' 
-                    : 'bg-white'
-                }`}
-              >
-                <CardContent className="p-8">
-                  {tier.featured && (
-                    <div className="bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] text-white text-sm font-medium px-3 py-1 rounded-full inline-block mb-4">
-                      Most Popular
-                    </div>
-                  )}
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] bg-clip-text text-transparent mb-4">
-                    {tier.amount}
-                  </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{tier.description}</p>
-                  
-                  <div className="space-y-3">
-                    {tier.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-start gap-2">
-                        <div className={`w-5 h-5 bg-gradient-to-r ${tier.color} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
-                        </div>
-                        <span className="text-gray-700">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Button
-                    onClick={handlePartnershipClick}
-                    className={`w-full mt-8 ${
-                      tier.featured
-                        ? 'bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] hover:from-[#3a5cef] hover:to-[#6c3def] text-white'
-                        : 'border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white'
-                    } transition-all duration-300`}
-                    variant={tier.featured ? 'default' : 'outline'}
-                  >
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Custom Partnership Section */}
+      {/* Society Partnership Section */}
       <section 
         className="py-20 lg:py-32"
         style={{
@@ -309,10 +242,10 @@ export function SponsorsPage() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Custom Partnerships
+            Are you a University Society?
           </h2>
           <p className="text-xl text-white/80 mb-12 leading-relaxed">
-            Every organization is unique. Let's create a partnership that 
+            Let's create a partnership that 
             perfectly aligns with your goals and values.
           </p>
 
@@ -322,23 +255,23 @@ export function SponsorsPage() {
                 <Target className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Strategic Alignment</h3>
-              <p className="text-white/80">We work with you to ensure our partnership aligns with your CSR and business objectives.</p>
+              <p className="text-white/80">Align on a shared mission and drive meaningful innovation together.</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8">
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Flexible Engagement</h3>
-              <p className="text-white/80">From event sponsorship to long-term programs, we offer flexible ways to get involved.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Boost Memberships</h3>
+              <p className="text-white/80">Connect with our member base to expand your reach and impact.</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8">
               <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Measurable Impact</h3>
-              <p className="text-white/80">Receive detailed reporting on the impact of your partnership and investment.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Student Growth</h3>
+              <p className="text-white/80">Create opportunities by linking your students to real-world projects.</p>
             </div>
           </div>
 
@@ -352,20 +285,6 @@ export function SponsorsPage() {
           </Button>
         </div>
       </section>
-
-      {/* Final CTA */}
-      <CTASection
-        title="Ready to Shape the Future Together?"
-        description="Join us in creating the next generation of tech leaders while driving meaningful change in the nonprofit sector."
-        primaryButtonText="Start Partnership Discussion"
-        secondaryButtonText="Read About Us"
-        onPrimaryClick={() => {
-          alert('Partnership discussion coming soon! Please email us at partnerships@futurelabs.co.uk');
-        }}
-        onSecondaryClick={() => {
-          alert('Impact report download coming soon!');
-        }}
-      />
 
       <ContactSponsor />
     </div>
