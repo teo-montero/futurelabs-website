@@ -52,12 +52,13 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
     { name: 'For Students', id: 'students', type: 'page' },
     { name: 'For Clients', id: 'clients', type: 'page' },
     { name: 'For Sponsors', id: 'sponsors', type: 'page' },
+    { name: 'Apply', id: 'apply', type: 'page' }
   ];
 
   const quickLinks = [
     { name: 'About', id: 'who-we-are' },
     { name: 'Services', id: 'services' },
-    { name: 'Contact', id: 'contact' },
+    { name: 'Contact', id: 'contact' }
   ];
 
   return (

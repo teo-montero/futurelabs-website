@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { CTASection } from '../components/CTASection';
+import { ContactStudent } from '../components/ContactStudent';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { GraduationCap, Users, Trophy, Briefcase, Code, Heart, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -151,20 +152,6 @@ export function StudentsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection
-        title="Ready to Make an Impact?"
-        description="Join a community of students who are using their skills to create positive change in the world."
-        primaryButtonText="Start Your Application"
-        secondaryButtonText="Contact Us"
-        onPrimaryClick={handleApplyClick}
-        onSecondaryClick={() => {
-          const element = document.getElementById('contact');
-          if (element) element.scrollIntoView({ behavior: 'smooth' });
-        }}
-        variant="gradient"
-      />
-
       {/* Application Process Section */}
       <section 
         className="py-20 lg:py-32"
@@ -218,15 +205,14 @@ export function StudentsPage() {
       </section>
 
       {/* Eligibility Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               What We Look For
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We work with nonprofits who are ready to embrace digital transformation 
-              and have the organizational capacity to collaborate effectively.
+              We look for motivated students who are eager to apply their skills to real-world projects and committed to making a meaningingful impact.
             </p>
           </div>
 
@@ -245,20 +231,20 @@ export function StudentsPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* CTA Section */}
       <CTASection
-        title="Questions About Joining?"
-        description="We're here to help! Reach out to learn more about opportunities, requirements, or our application process."
-        primaryButtonText="Contact Our Team"
+        title="Ready to Make an Impact?"
+        description="Join a community of students who are using their skills to create positive change in the world."
+        primaryButtonText="Start Your Application"
         secondaryButtonText="View FAQ"
-        onPrimaryClick={() => {
-          // This would typically scroll to contact or open a contact form
-          alert('Contact form coming soon! Please email us at students@futurelabs.co.uk');
-        }}
+        onPrimaryClick={handleApplyClick}
         onSecondaryClick={() => {
-          alert('FAQ section coming soon!');
+          const element = document.getElementById('contact');
+          if (element) element.scrollIntoView({ behavior: 'smooth' });
         }}
       />
+
+      <ContactStudent />
     </div>
   );
 }

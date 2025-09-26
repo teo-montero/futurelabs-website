@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from './ui/card';
-import { Mail, MessageCircle, Heart, BarChart3 } from 'lucide-react';
+import { Mail, MessageCircle, Heart, BarChart3, GraduationCap, Building2 } from 'lucide-react';
 
-export function Services() {
+export function Mission() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -25,27 +25,15 @@ export function Services() {
 
   const services = [
     {
-      icon: Mail,
-      title: "Automated Email Handling",
-      description: "Streamline donor communications, volunteer coordination, and beneficiary outreach with intelligent email automation systems.",
-      lightTheme: true
-    },
-    {
-      icon: MessageCircle,
-      title: "AI Customer Support Chatbots",
-      description: "24/7 support for your community with AI-powered chatbots that understand your mission and provide personalized assistance.",
+      icon: GraduationCap,
+      title: "Empowering Students",
+      description: "We provide students with real-world consulting experience, giving them the opportunity to apply their skills on live projects and develop digital solutions that drive impact.",
       lightTheme: false
     },
     {
-      icon: Heart,
-      title: "Client Loyalty Platforms",
-      description: "Build stronger relationships with donors, volunteers, and beneficiaries through engaging loyalty and recognition programs.",
-      lightTheme: true
-    },
-    {
-      icon: BarChart3,
-      title: "Automated Feedback Systems",
-      description: "Continuous improvement through automated feedback collection, analysis, and actionable insights for your programs.",
+      icon:  Building2,
+      title: "Supporting Organisations",
+      description: "We deliver digital solutions that help organisations modernise, innovate, and create lasting value — making digital transformation accessible to everyone.",
       lightTheme: false
     }
   ];
@@ -56,20 +44,19 @@ export function Services() {
       ref={sectionRef}
       className="py-20 lg:py-32"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-grey-50">
         
-        {/* Section Header */}
+        {/* Mission Header */}
         <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Services
+            Our Mission
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive digital solutions designed specifically for nonprofits, 
-            helping you focus on what matters most – your mission.
+            We empower students to gain real-world experience delivering digital consulting solutions, while driving transformation and creating lasting value in organisations.
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Missions Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div

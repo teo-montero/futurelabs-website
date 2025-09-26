@@ -5,7 +5,7 @@ import { Textarea } from './ui/textarea';
 import { Card, CardContent } from './ui/card';
 import { Mail, Phone, ArrowRight, Send } from 'lucide-react';
 
-export function Contact() {
+export function ContactClient() {
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -89,24 +89,6 @@ export function Contact() {
               </CardContent>
             </Card>
 
-            {/* Phone Card */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-[#7c4dff]/5 to-[#4a6cff]/5 border border-[#7c4dff]/20">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#7c4dff] to-[#4a6cff] rounded-xl flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Call Us</h3>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-gray-600">Direct Line</p>
-                  <p className="font-medium text-gray-900">+44 (0) 20 7946 0958</p>
-                  <p className="text-gray-600 mt-4">Available</p>
-                  <p className="font-medium text-gray-900">Mon-Fri, 9AM-6PM GMT</p>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* CTA Buttons */}
             <div className="space-y-4 pt-4">
               <Button
@@ -115,15 +97,6 @@ export function Contact() {
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Send Email
-              </Button>
-              
-              <Button
-                variant="outline"
-                className="w-full border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white transition-all duration-300"
-                size="lg"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Schedule Call
               </Button>
             </div>
           </div>
@@ -137,7 +110,7 @@ export function Contact() {
                     Tell Us About Your Project
                   </h3>
                   <p className="text-gray-600">
-                    Share your vision and challenges – we'll respond within 24 hours with next steps.
+                    Get in touch – we'll respond with the next steps.
                   </p>
                 </div>
 
@@ -155,7 +128,6 @@ export function Contact() {
                         value={formData.name}
                         onChange={handleInputChange}
                         className="border-gray-300 focus:border-[#4a6cff] focus:ring-[#4a6cff] transition-colors duration-200"
-                        placeholder="John Doe"
                       />
                     </div>
                     
@@ -171,7 +143,6 @@ export function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         className="border-gray-300 focus:border-[#4a6cff] focus:ring-[#4a6cff] transition-colors duration-200"
-                        placeholder="john@yourorganization.org"
                       />
                     </div>
                   </div>
@@ -188,7 +159,6 @@ export function Contact() {
                       value={formData.organization}
                       onChange={handleInputChange}
                       className="border-gray-300 focus:border-[#4a6cff] focus:ring-[#4a6cff] transition-colors duration-200"
-                      placeholder="Your Organization Name"
                     />
                   </div>
 
@@ -204,7 +174,6 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleInputChange}
                       className="border-gray-300 focus:border-[#4a6cff] focus:ring-[#4a6cff] transition-colors duration-200 resize-none"
-                      placeholder="Tell us about your organization's mission, current challenges, and how you envision technology helping you achieve greater impact..."
                     />
                   </div>
 
@@ -216,16 +185,6 @@ export function Contact() {
                     >
                       <Send className="mr-2 h-5 w-5" />
                       Send Message
-                    </Button>
-                    
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="border-2 border-[#4a6cff] text-[#4a6cff] hover:bg-[#4a6cff] hover:text-white transition-all duration-300"
-                      size="lg"
-                    >
-                      <ArrowRight className="mr-2 h-5 w-5" />
-                      Book a Call Instead
                     </Button>
                   </div>
                 </form>

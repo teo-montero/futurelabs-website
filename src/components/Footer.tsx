@@ -47,8 +47,6 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
 
   const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/company/futurelabs-advisory' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/futurelabs_uk' },
-    { name: 'GitHub', icon: Github, url: 'https://github.com/futurelabs-advisory' },
     { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/futurelabs.uk' },
     { name: 'Email', icon: Mail, url: 'mailto:hello@futurelabs.co.uk' },
   ];
@@ -185,7 +183,7 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
           </div>
         </div>
 
-        {/* Additional Info */}
+        {/* Additional Info 
         <div className="mt-8 pt-8 border-t border-white/10">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
             <div className="text-center">
@@ -210,7 +208,7 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     </footer>
   );

@@ -25,28 +25,22 @@ export function WhyWorkWithUs() {
   const features = [
     {
       icon: DollarSign,
-      title: "Affordable Excellence",
+      title: "For Students",
       description: "Premium digital solutions at nonprofit-friendly prices, with flexible payment options and grant application support.",
       gradient: "from-[#4a6cff] to-[#5a7cff]"
     },
     {
       icon: TrendingUp,
-      title: "Long-Term Value Creation",
-      description: "Solutions designed to grow with your organization, with ongoing support and strategic guidance for sustained impact.",
+      title: "For Organisations",
+      description: "We don't just deliver strategies – we partner with you to develop comprehensive digital solutions that align with your mission.",
       gradient: "from-[#7c4dff] to-[#8c5dff]"
     },
     {
       icon: Zap,
-      title: "Strategy + Execution",
+      title: "For Sponsorts",
       description: "We don't just build solutions – we partner with you to develop comprehensive digital strategies that align with your mission.",
       gradient: "from-[#4a6cff] to-[#7c4dff]"
     },
-    {
-      icon: Users,
-      title: "Dynamic Talent Access",
-      description: "Tap into our network of specialists across tech, design, and nonprofit sectors, scaling your team as needed.",
-      gradient: "from-[#6a4cff] to-[#7c4dff]"
-    }
   ];
 
   return (
@@ -69,7 +63,7 @@ export function WhyWorkWithUs() {
         {/* Section Header */}
         <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Why Work With FutureLabs?
+            What Makes FutureLabs Different?
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             We're more than a service provider – we're your strategic partner in 
@@ -78,7 +72,7 @@ export function WhyWorkWithUs() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -103,6 +97,8 @@ export function WhyWorkWithUs() {
                       {feature.description}
                     </p>
                   </div>
+
+                  {/* More Information Button */}
                 </div>
               </div>
             </div>

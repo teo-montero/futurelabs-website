@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { CTASection } from '../components/CTASection';
+import { ContactSponsor } from '../components/ContactSponsor';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Handshake, Target, TrendingUp, Award, Users, Globe, ArrowRight, Heart } from 'lucide-react';
 
@@ -150,14 +151,14 @@ export function SponsorsPage() {
                 size="lg"
                 className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
               >
-                Download Partnership Deck
+                Read About Us
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Impact Metrics Section */}
+      {/* Impact Metrics Section
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -184,7 +185,7 @@ export function SponsorsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Partnership Benefits Section */}
       <section ref={sectionRef} className="py-20 lg:py-32 bg-gray-50">
@@ -195,7 +196,7 @@ export function SponsorsPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Your partnership creates a triple impact: supporting nonprofits, 
-              developing student talent, and advancing your business objectives.
+              developing student talent, and advancing your objectives.
             </p>
           </div>
 
@@ -354,10 +355,10 @@ export function SponsorsPage() {
 
       {/* Final CTA */}
       <CTASection
-        title="Ready to Shape the Future?"
+        title="Ready to Shape the Future Together?"
         description="Join us in creating the next generation of tech leaders while driving meaningful change in the nonprofit sector."
         primaryButtonText="Start Partnership Discussion"
-        secondaryButtonText="Download Impact Report"
+        secondaryButtonText="Read About Us"
         onPrimaryClick={() => {
           alert('Partnership discussion coming soon! Please email us at partnerships@futurelabs.co.uk');
         }}
@@ -365,6 +366,8 @@ export function SponsorsPage() {
           alert('Impact report download coming soon!');
         }}
       />
+
+      <ContactSponsor />
     </div>
   );
 }

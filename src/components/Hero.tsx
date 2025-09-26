@@ -146,7 +146,7 @@ export function Hero() {
               size="lg"
               className="bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] hover:from-[#3a5cef] hover:to-[#6c3def] text-white border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg"
             >
-              Start a Conversation
+              Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
@@ -156,7 +156,7 @@ export function Hero() {
               size="lg"
               className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300"
             >
-              Explore Services
+              Explore Our Mission
             </Button>
           </div>
         </div>

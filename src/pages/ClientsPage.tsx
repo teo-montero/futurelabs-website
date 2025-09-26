@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { CTASection } from '../components/CTASection';
+import { ContactClient} from '../components/ContactClient';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Building, Users, DollarSign, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 import { OnboardingProcess } from '../components/OnboardingProcess';
@@ -102,7 +103,7 @@ export function ClientsPage() {
           <div className="space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
               <Building className="h-4 w-4 text-[#4a6cff]" />
-              <span className="text-sm text-white/90">For Nonprofits & Charities</span>
+              <span className="text-sm text-white/90">For Organisations</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
@@ -145,7 +146,7 @@ export function ClientsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Partner with FutureLabs?
+              Why Collaborate with FutureLabs?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We understand the unique challenges facing nonprofits and provide 
@@ -258,19 +259,8 @@ export function ClientsPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <CTASection
-        title="Questions About Our Services?"
-        description="We're here to help you understand how our pro bono services can benefit your organization. Let's start a conversation."
-        primaryButtonText="Contact Our Team"
-        secondaryButtonText="View Case Studies"
-        onPrimaryClick={() => {
-          alert('Contact form coming soon! Please email us at clients@futurelabs.co.uk');
-        }}
-        onSecondaryClick={() => {
-          alert('Case studies section coming soon!');
-        }}
-      />
+      {/* Client Contact Form */}
+      <ContactClient />
     </div>
   );
 }

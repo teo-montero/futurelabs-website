@@ -5,6 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { StudentsPage } from './pages/StudentsPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { SponsorsPage } from './pages/SponsorsPage';
+import { ApplicationPage } from './pages/ApplicationsPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -22,6 +23,8 @@ export default function App() {
         return <ClientsPage />;
       case 'sponsors':
         return <SponsorsPage />;
+      case 'apply':
+        return <ApplicationPage />
       default:
         return <HomePage />;
     }

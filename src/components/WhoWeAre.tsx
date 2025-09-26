@@ -59,7 +59,7 @@ export function WhoWeAre() {
               </div>
             </div>
 
-            {/* Key Stats */}
+            {/* Key Stats 
             <div className="grid grid-cols-3 gap-8 pt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] bg-clip-text text-transparent">
@@ -79,7 +79,7 @@ export function WhoWeAre() {
                 </div>
                 <div className="text-sm text-gray-600 mt-1">Client Satisfaction</div>
               </div>
-            </div>
+            </div>*/}
           </div>
 
           {/* Right: Illustration/Graphic */}
@@ -96,36 +96,10 @@ export function WhoWeAre() {
               {/* Main Image Container */}
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwY29uc3VsdGluZyUyMG5vbnByb2ZpdCUyMGltcGFjdHxlbnwwfHx8fDE3NTc0Mzk4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="https://thumbs.dreamstime.com/b/london-england-panoramic-skyline-view-bank-district-london-skyscrapers-canary-wharf-background-blue-105053967.jpg"
                   alt="Digital consulting for nonprofit impact visualization"
                   className="w-full h-96 object-cover"
                 />
-                
-                {/* Overlay with Icons */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="text-lg font-bold text-gray-900">Impact Amplified</div>
-                          <div className="text-sm text-gray-600">Through Smart Technology</div>
-                        </div>
-                        <div className="w-12 h-12 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-xl flex items-center justify-center">
-                          <span className="text-white text-xl">🚀</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-[#4a6cff] to-[#7c4dff] rounded-2xl flex items-center justify-center shadow-xl">
-                <span className="text-white text-2xl">💡</span>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-[#7c4dff] to-[#4a6cff] rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white text-xl">🎯</span>
               </div>
             </div>
           </div>

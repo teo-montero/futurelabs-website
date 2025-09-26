@@ -39,6 +39,82 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* FutureLabs Brand Colors */
+  --futurelabs-navy: #0a0f29;
+  --futurelabs-purple: #1a093e;
+  --futurelabs-blue: #4a6cff;
+  --futurelabs-purple-glow: #7c4dff;
+  
+  /* FutureLabs Color Variations */
+  --futurelabs-blue-hover: #3a5cef;
+  --futurelabs-purple-glow-hover: #6c3def;
+  --futurelabs-blue-light: rgba(74, 108, 255, 0.1);
+  --futurelabs-purple-glow-light: rgba(124, 77, 255, 0.1);
+  --futurelabs-blue-20: rgba(74, 108, 255, 0.2);
+  --futurelabs-purple-glow-20: rgba(124, 77, 255, 0.2);
+  
+  /* FutureLabs Gradients */
+  --futurelabs-gradient-primary: linear-gradient(135deg, var(--futurelabs-blue) 0%, var(--futurelabs-purple-glow) 100%);
+  --futurelabs-gradient-secondary: linear-gradient(135deg, var(--futurelabs-navy) 0%, var(--futurelabs-purple) 100%);
+  --futurelabs-gradient-light: linear-gradient(135deg, var(--futurelabs-blue-light) 0%, var(--futurelabs-purple-glow-light) 100%);
+  
+  /* FutureLabs Text Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  
+  /* FutureLabs Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* FutureLabs Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  
+  /* FutureLabs Animation Timings */
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+  
+  /* FutureLabs Easing Functions */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* FutureLabs Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
 }
 
 .dark {
@@ -117,6 +193,18 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* FutureLabs Brand Colors for Tailwind */
+  --color-futurelabs-navy: var(--futurelabs-navy);
+  --color-futurelabs-purple: var(--futurelabs-purple);
+  --color-futurelabs-blue: var(--futurelabs-blue);
+  --color-futurelabs-purple-glow: var(--futurelabs-purple-glow);
+  --color-futurelabs-blue-hover: var(--futurelabs-blue-hover);
+  --color-futurelabs-purple-glow-hover: var(--futurelabs-purple-glow-hover);
+  --color-futurelabs-blue-light: var(--futurelabs-blue-light);
+  --color-futurelabs-purple-glow-light: var(--futurelabs-purple-glow-light);
+  --color-futurelabs-blue-20: var(--futurelabs-blue-20);
+  --color-futurelabs-purple-glow-20: var(--futurelabs-purple-glow-20);
 }
 
 @layer base {
@@ -289,17 +377,151 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradient text utilities */
+/* FutureLabs Utility Classes */
+
+/* Gradient Text Utilities */
 .gradient-text-primary {
-  background: linear-gradient(135deg, #4a6cff 0%, #7c4dff 100%);
+  background: var(--futurelabs-gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Glassy effect utilities */
+.gradient-text-secondary {
+  background: var(--futurelabs-gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Background Gradient Utilities */
+.bg-gradient-primary {
+  background: var(--futurelabs-gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--futurelabs-gradient-secondary);
+}
+
+.bg-gradient-light {
+  background: var(--futurelabs-gradient-light);
+}
+
+/* Glassy Effect Utilities */
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-effect-dark {
+  background: rgba(10, 15, 41, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(10, 15, 41, 0.2);
+}
+
+/* Brand Color Utilities */
+.text-futurelabs-navy { color: var(--futurelabs-navy); }
+.text-futurelabs-purple { color: var(--futurelabs-purple); }
+.text-futurelabs-blue { color: var(--futurelabs-blue); }
+.text-futurelabs-purple-glow { color: var(--futurelabs-purple-glow); }
+
+.bg-futurelabs-navy { background-color: var(--futurelabs-navy); }
+.bg-futurelabs-purple { background-color: var(--futurelabs-purple); }
+.bg-futurelabs-blue { background-color: var(--futurelabs-blue); }
+.bg-futurelabs-purple-glow { background-color: var(--futurelabs-purple-glow); }
+
+.border-futurelabs-navy { border-color: var(--futurelabs-navy); }
+.border-futurelabs-purple { border-color: var(--futurelabs-purple); }
+.border-futurelabs-blue { border-color: var(--futurelabs-blue); }
+.border-futurelabs-purple-glow { border-color: var(--futurelabs-purple-glow); }
+
+/* Hover State Utilities */
+.hover-futurelabs-blue:hover { background-color: var(--futurelabs-blue-hover); }
+.hover-futurelabs-purple-glow:hover { background-color: var(--futurelabs-purple-glow-hover); }
+
+/* Shadow Utilities */
+.shadow-futurelabs-sm { box-shadow: var(--shadow-sm); }
+.shadow-futurelabs-md { box-shadow: var(--shadow-md); }
+.shadow-futurelabs-lg { box-shadow: var(--shadow-lg); }
+.shadow-futurelabs-xl { box-shadow: var(--shadow-xl); }
+.shadow-futurelabs-2xl { box-shadow: var(--shadow-2xl); }
+
+/* Transition Utilities */
+.transition-futurelabs {
+  transition-property: all;
+  transition-timing-function: var(--ease-out);
+  transition-duration: var(--duration-300);
+}
+
+.transition-futurelabs-fast {
+  transition-property: all;
+  transition-timing-function: var(--ease-out);
+  transition-duration: var(--duration-150);
+}
+
+.transition-futurelabs-slow {
+  transition-property: all;
+  transition-timing-function: var(--ease-out);
+  transition-duration: var(--duration-500);
+}
+
+/* Interactive Button Styles */
+.btn-futurelabs-primary {
+  background: var(--futurelabs-gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-8);
+  font-weight: var(--font-weight-medium);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--duration-300) var(--ease-out);
+  transform: scale(1);
+}
+
+.btn-futurelabs-primary:hover {
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.05);
+}
+
+.btn-futurelabs-secondary {
+  background: transparent;
+  color: var(--futurelabs-blue);
+  border: 2px solid var(--futurelabs-blue);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-8);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--duration-300) var(--ease-out);
+}
+
+.btn-futurelabs-secondary:hover {
+  background: var(--futurelabs-blue);
+  color: white;
+}
+
+/* Card Styles */
+.card-futurelabs {
+  background: white;
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all var(--duration-300) var(--ease-out);
+}
+
+.card-futurelabs:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+}
+
+.card-futurelabs-dark {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-3xl);
+  transition: all var(--duration-300) var(--ease-out);
+}
+
+.card-futurelabs-dark:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
